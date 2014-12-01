@@ -14,6 +14,13 @@ Gem::Specification.new do |s|
   s.date = "2014-11-29"
   s.description = ""
   s.email = ["crypt+env@specialbrands.net", ""]
+  s.files = [
+    "Gemfile",
+    "Rakefile",
+    "crypt-env.gemspec",
+    "lib/crypt-env.rb",
+    "lib/crypt-env/version.rb"
+  ]
   s.homepage = "http://github.com/webhat/crypt-env"
   s.licenses = ["LGPLv2"]
   s.rubygems_version = "2.2.2"
