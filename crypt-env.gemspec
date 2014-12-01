@@ -11,15 +11,26 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
   s.authors = ["Daniel W. Crompton"]
-  s.date = "2014-11-29"
+  s.date = "2014-12-01"
   s.description = ""
   s.email = ["crypt+env@specialbrands.net", ""]
+  s.extra_rdoc_files = [
+    "README.md"
+  ]
   s.files = [
+    ".rspec",
     "Gemfile",
+    "README.md",
     "Rakefile",
     "crypt-env.gemspec",
     "lib/crypt-env.rb",
-    "lib/crypt-env/version.rb"
+    "lib/crypt-env/middleware.rb",
+    "lib/crypt-env/middleware/initializer.rb",
+    "lib/crypt-env/version.rb",
+    "spec/crypt-env/middleware/initializer_spec.rb",
+    "spec/crypt-env/middleware_spec.rb",
+    "spec/crypt-env_spec.rb",
+    "spec/spec_helper.rb"
   ]
   s.homepage = "http://github.com/webhat/crypt-env"
   s.licenses = ["LGPLv2"]
