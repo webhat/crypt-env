@@ -4,3 +4,4 @@ gem 'rails', '4.1.8'
 gem 'sqlite3'
 
 gem 'crypt-env', path: '../../'
+gem 'rspec-rails'
