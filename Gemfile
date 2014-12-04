@@ -36,4 +36,5 @@ group :development, :test do
 	gem 'rspec'
 	gem 'rspec-rails'
 	gem 'coveralls', require: false
+	gem 'generator_spec'
 end
