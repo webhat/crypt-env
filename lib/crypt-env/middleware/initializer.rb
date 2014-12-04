@@ -7,8 +7,7 @@ module CryptEnv
 			end
 
 			def call(env)
-				key = 'TEST'
-				CryptEnv.retrieve key, ENV[key]
+				ConvertEnvironment.populate
 
 				@app.call(env)
 			end
