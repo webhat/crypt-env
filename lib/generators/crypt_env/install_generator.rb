@@ -1,5 +1,5 @@
 module CryptEnv
-	class Generator < Rails::Generators::NamedBase
+	class InstallGenerator < Rails::Generators::Base
 		source_root File.expand_path('../templates', __FILE__)
 
 		def create_initializer_file
@@ -7,7 +7,7 @@ module CryptEnv
 		end
 
 		def initializer_file
-<<RUBY
+			<<RUBY
 CryptEnv.setup(key: ENV['CRYPT_ENV_KEY'])
 RUBY
 		end

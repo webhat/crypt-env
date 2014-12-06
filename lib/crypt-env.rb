@@ -1,7 +1,7 @@
 # in lib/crypt-env.rb
 module CryptEnv
 	autoload :Middleware, 'crypt-env/middleware'
-	autoload :Generator, 'generators/crypt-env/generator'
+	autoload :InstallGenerator, 'generators/crypt_env/install_generator'
 
 	@@env = {}
 	@@crypto_key = ''

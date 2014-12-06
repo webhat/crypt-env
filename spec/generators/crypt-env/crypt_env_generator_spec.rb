@@ -1,7 +1,7 @@
 require 'generator_spec'
 require 'spec_helper'
 
-describe CryptEnv::Generator, type: :generator do
+describe CryptEnv::InstallGenerator, type: :generator do
 	destination File.expand_path('../../tmp', __FILE__)
 	arguments %w(something)
 

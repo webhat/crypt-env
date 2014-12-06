@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
   s.authors = ["Daniel W. Crompton"]
-  s.date = "2014-12-01"
+  s.date = "2014-12-06"
   s.description = ""
   s.email = ["crypt+env@specialbrands.net", ""]
   s.extra_rdoc_files = [
@@ -19,17 +19,69 @@ Gem::Specification.new do |s|
   ]
   s.files = [
     ".rspec",
+    ".travis.yml",
     "Gemfile",
     "README.md",
     "Rakefile",
     "crypt-env.gemspec",
     "lib/crypt-env.rb",
     "lib/crypt-env/middleware.rb",
+    "lib/crypt-env/middleware/convert_environment.rb",
     "lib/crypt-env/middleware/initializer.rb",
     "lib/crypt-env/version.rb",
+    "lib/generators/crypt-env/USAGE",
+    "spec/crypt-env/middleware/convert_environment_spec.rb",
     "spec/crypt-env/middleware/initializer_spec.rb",
     "spec/crypt-env/middleware_spec.rb",
     "spec/crypt-env_spec.rb",
+    "spec/generators/crypt-env/crypt_env_generator_spec.rb",
+    "spec/generators/tmp/config/initializers/crypt-env.rb",
+    "spec/rails-app/.gitignore",
+    "spec/rails-app/.rspec",
+    "spec/rails-app/Gemfile",
+    "spec/rails-app/Rakefile",
+    "spec/rails-app/app/assets/images/.keep",
+    "spec/rails-app/app/assets/javascripts/application.js",
+    "spec/rails-app/app/assets/stylesheets/application.css",
+    "spec/rails-app/app/controllers/application_controller.rb",
+    "spec/rails-app/app/controllers/concerns/.keep",
+    "spec/rails-app/app/controllers/crypt_env_test_controller.rb",
+    "spec/rails-app/app/helpers/application_helper.rb",
+    "spec/rails-app/app/helpers/crypt_env_test_helper.rb",
+    "spec/rails-app/app/mailers/.keep",
+    "spec/rails-app/app/models/.keep",
+    "spec/rails-app/app/models/concerns/.keep",
+    "spec/rails-app/app/views/crypt_env_test/index.html.erb",
+    "spec/rails-app/app/views/layouts/application.html.erb",
+    "spec/rails-app/bin/bundle",
+    "spec/rails-app/bin/rails",
+    "spec/rails-app/bin/rake",
+    "spec/rails-app/bin/spring",
+    "spec/rails-app/config.ru",
+    "spec/rails-app/config/application.rb",
+    "spec/rails-app/config/boot.rb",
+    "spec/rails-app/config/database.yml",
+    "spec/rails-app/config/environment.rb",
+    "spec/rails-app/config/environments/development.rb",
+    "spec/rails-app/config/environments/production.rb",
+    "spec/rails-app/config/environments/test.rb",
+    "spec/rails-app/config/initializers/assets.rb",
+    "spec/rails-app/config/initializers/backtrace_silencers.rb",
+    "spec/rails-app/config/initializers/cookies_serializer.rb",
+    "spec/rails-app/config/initializers/crypt-env.rb",
+    "spec/rails-app/config/initializers/filter_parameter_logging.rb",
+    "spec/rails-app/config/initializers/inflections.rb",
+    "spec/rails-app/config/initializers/mime_types.rb",
+    "spec/rails-app/config/initializers/session_store.rb",
+    "spec/rails-app/config/initializers/wrap_parameters.rb",
+    "spec/rails-app/config/locales/en.yml",
+    "spec/rails-app/config/routes.rb",
+    "spec/rails-app/config/secrets.yml",
+    "spec/rails-app/db/seeds.rb",
+    "spec/rails-app/log/.keep",
+    "spec/rails-app/spec/rails_helper.rb",
+    "spec/rails-app/spec/requests/crypt_env_test_controller_spec.rb",
+    "spec/rails-app/spec/spec_helper.rb",
     "spec/spec_helper.rb"
   ]
   s.homepage = "http://github.com/webhat/crypt-env"
@@ -55,6 +107,7 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<rspec>, [">= 0"])
       s.add_development_dependency(%q<rspec-rails>, [">= 0"])
       s.add_development_dependency(%q<coveralls>, [">= 0"])
+      s.add_development_dependency(%q<generator_spec>, [">= 0"])
     else
       s.add_dependency(%q<paperclip>, [">= 0"])
       s.add_dependency(%q<redis>, [">= 0"])
@@ -70,6 +123,7 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<rspec>, [">= 0"])
       s.add_dependency(%q<rspec-rails>, [">= 0"])
       s.add_dependency(%q<coveralls>, [">= 0"])
+      s.add_dependency(%q<generator_spec>, [">= 0"])
     end
   else
     s.add_dependency(%q<paperclip>, [">= 0"])
@@ -86,6 +140,7 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<rspec>, [">= 0"])
     s.add_dependency(%q<rspec-rails>, [">= 0"])
     s.add_dependency(%q<coveralls>, [">= 0"])
+    s.add_dependency(%q<generator_spec>, [">= 0"])
   end
 end
 
