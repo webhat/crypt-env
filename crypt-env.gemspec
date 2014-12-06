@@ -29,7 +29,7 @@ Gem::Specification.new do |s|
     "lib/crypt-env/middleware/convert_environment.rb",
     "lib/crypt-env/middleware/initializer.rb",
     "lib/crypt-env/version.rb",
-    "lib/generators/crypt-env/USAGE",
+    "lib/generators/crypt_env/install_generator.rb",
     "spec/crypt-env/middleware/convert_environment_spec.rb",
     "spec/crypt-env/middleware/initializer_spec.rb",
     "spec/crypt-env/middleware_spec.rb",
@@ -93,8 +93,6 @@ Gem::Specification.new do |s|
     s.specification_version = 4
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<paperclip>, [">= 0"])
-      s.add_runtime_dependency(%q<redis>, [">= 0"])
       s.add_development_dependency(%q<shoulda>, [">= 0"])
       s.add_development_dependency(%q<rdoc>, ["~> 3.12"])
       s.add_development_dependency(%q<bundler>, ["~> 1.0"])
@@ -109,8 +107,6 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<coveralls>, [">= 0"])
       s.add_development_dependency(%q<generator_spec>, [">= 0"])
     else
-      s.add_dependency(%q<paperclip>, [">= 0"])
-      s.add_dependency(%q<redis>, [">= 0"])
       s.add_dependency(%q<shoulda>, [">= 0"])
       s.add_dependency(%q<rdoc>, ["~> 3.12"])
       s.add_dependency(%q<bundler>, ["~> 1.0"])
@@ -126,8 +122,6 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<generator_spec>, [">= 0"])
     end
   else
-    s.add_dependency(%q<paperclip>, [">= 0"])
-    s.add_dependency(%q<redis>, [">= 0"])
     s.add_dependency(%q<shoulda>, [">= 0"])
     s.add_dependency(%q<rdoc>, ["~> 3.12"])
     s.add_dependency(%q<bundler>, ["~> 1.0"])

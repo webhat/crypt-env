@@ -17,9 +17,6 @@ else
 	"~> #{rails_version}"
 end
 
-gem 'paperclip'
-gem 'redis'
-
 group :development do
   gem 'shoulda', '>= 0'
   gem 'rdoc', '~> 3.12'
