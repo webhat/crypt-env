@@ -28,6 +28,7 @@ script:
 - bundle install
 - bundle exec rake db:migrate --trace
 - bundle exec rake db:test:prepare
+- bundle exec rake
 - cd ../..
 - bundle exec rake
 before_install:
@@ -44,3 +45,4 @@ notifications:
       - irc.freenode.org#crypt-env
     on_success: never
     on_failure: change
+sudo: false
