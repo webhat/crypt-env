@@ -3,5 +3,5 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.8'
 gem 'sqlite3'
 
-gem 'crypt-env', path: '../../'
+gem 'crypt-env', path: '../../', require: true
 gem 'rspec-rails'
