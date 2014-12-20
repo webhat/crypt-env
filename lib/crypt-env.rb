@@ -21,8 +21,8 @@ module CryptEnv
 		@@env[key] = value
 	end
 
-	def self.setup crypto_key, crypto_iv
-		@@crypto_key = crypto_key
-		@@crypto_iv  = crypto_iv
+	def self.setup crypto
+		@@crypto_key = crypto[:key]
+		@@crypto_iv  = crypto[:iv]
 	end
 end

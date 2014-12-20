@@ -6,7 +6,7 @@ describe CryptEnv::Middleware::ConvertEnvironment do
 		@encrypt.encrypt
 		@key     = @encrypt.random_key
 		@iv      = @encrypt.random_iv
-		CryptEnv.setup @key, @iv
+		CryptEnv.setup key: @key, iv: @iv
 	end
 
 	it '#populate' do
