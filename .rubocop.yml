@@ -1,0 +1,11 @@
+inherit_from: .rubocop_todo.yml
+
+AllCops:
+  Exclude:
+    - 'vendor/**/*'
+    - 'spec/fixtures/**/*'
+    - 'spec/rails-app/vendor/**/*'
+    - 'spec/rails-app/spec/fixtures/**/*'
+
+Style/Encoding:
+  Enabled: false

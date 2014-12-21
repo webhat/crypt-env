@@ -30,6 +30,7 @@ end
 group :development, :test do
   gem 'guard-rspec', '>= 0'
   gem 'guard-yard', '>= 0'
+  gem 'guard-rubocop', '>= 0'
 	gem 'rails', rails
 	gem 'sqlite3'
 	gem 'rspec'

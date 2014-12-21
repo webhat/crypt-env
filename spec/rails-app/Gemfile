@@ -5,3 +5,9 @@ gem 'sqlite3'
 
 gem 'crypt-env', path: '../../', require: true
 gem 'rspec-rails'
+
+
+group :development, :test do
+  gem 'guard-rspec', '>= 0'
+  gem 'guard-rubocop', '>= 0'
+end
