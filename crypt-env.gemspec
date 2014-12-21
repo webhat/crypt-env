@@ -19,6 +19,8 @@ Gem::Specification.new do |s|
   ]
   s.files = [
     ".rspec",
+    ".rubocop.yml",
+    ".rubocop_todo.yml",
     ".travis.yml",
     "Gemfile",
     "Guardfile",
@@ -27,11 +29,13 @@ Gem::Specification.new do |s|
     "config/Guardfile",
     "crypt-env.gemspec",
     "lib/crypt-env.rb",
+    "lib/crypt-env/crypto.rb",
     "lib/crypt-env/middleware.rb",
     "lib/crypt-env/middleware/convert_environment.rb",
     "lib/crypt-env/middleware/initializer.rb",
     "lib/crypt-env/version.rb",
     "lib/generators/crypt_env/install_generator.rb",
+    "spec/crypt-env/crypto_spec.rb",
     "spec/crypt-env/middleware/convert_environment_spec.rb",
     "spec/crypt-env/middleware/initializer_spec.rb",
     "spec/crypt-env/middleware_spec.rb",
@@ -40,7 +44,10 @@ Gem::Specification.new do |s|
     "spec/generators/tmp/config/initializers/crypt-env.rb",
     "spec/rails-app/.gitignore",
     "spec/rails-app/.rspec",
+    "spec/rails-app/.rubocop.yml",
+    "spec/rails-app/.rubocop_todo.yml",
     "spec/rails-app/Gemfile",
+    "spec/rails-app/Guardfile",
     "spec/rails-app/Rakefile",
     "spec/rails-app/app/assets/images/.keep",
     "spec/rails-app/app/assets/javascripts/application.js",
@@ -60,6 +67,7 @@ Gem::Specification.new do |s|
     "spec/rails-app/bin/rake",
     "spec/rails-app/bin/spring",
     "spec/rails-app/config.ru",
+    "spec/rails-app/config/Guardfile",
     "spec/rails-app/config/application.rb",
     "spec/rails-app/config/boot.rb",
     "spec/rails-app/config/database.yml",
@@ -103,6 +111,7 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<simplecov>, [">= 0"])
       s.add_development_dependency(%q<guard-rspec>, [">= 0"])
       s.add_development_dependency(%q<guard-yard>, [">= 0"])
+      s.add_development_dependency(%q<guard-rubocop>, [">= 0"])
       s.add_development_dependency(%q<rails>, [">= 3.1.0"])
       s.add_development_dependency(%q<sqlite3>, [">= 0"])
       s.add_development_dependency(%q<rspec>, [">= 0"])
@@ -118,6 +127,7 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<simplecov>, [">= 0"])
       s.add_dependency(%q<guard-rspec>, [">= 0"])
       s.add_dependency(%q<guard-yard>, [">= 0"])
+      s.add_dependency(%q<guard-rubocop>, [">= 0"])
       s.add_dependency(%q<rails>, [">= 3.1.0"])
       s.add_dependency(%q<sqlite3>, [">= 0"])
       s.add_dependency(%q<rspec>, [">= 0"])
@@ -134,6 +144,7 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<simplecov>, [">= 0"])
     s.add_dependency(%q<guard-rspec>, [">= 0"])
     s.add_dependency(%q<guard-yard>, [">= 0"])
+    s.add_dependency(%q<guard-rubocop>, [">= 0"])
     s.add_dependency(%q<rails>, [">= 3.1.0"])
     s.add_dependency(%q<sqlite3>, [">= 0"])
     s.add_dependency(%q<rspec>, [">= 0"])
