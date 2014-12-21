@@ -6,7 +6,7 @@ RSpec.describe 'CryptEnvTestController' do
 		@encrypt.encrypt
 		@key     = @encrypt.random_key
 		@iv      = @encrypt.random_iv
-		CryptEnv.setup @key, @iv
+		CryptEnv.setup key: @key, iv: @iv
 	end
 
 	it 'should do one environment variable' do
